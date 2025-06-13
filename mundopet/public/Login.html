@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+  <script src="scriptdashboard.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      border-radius: 10px;
+    }
+
+    .login-card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .login-btn {
+      background-color: #099092;
+      border-color: #099092;
+      color: white;
+      font-weight: bold;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #077a7a;
+    }
+
+    /* Estilo do popup */
+    .alert-box {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #087375;
+      border: 2px solid #444;
+      padding: 20px;
+      z-index: 9999;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      border-radius: 8px;
+      display: none;
+      width: 300px;
+    }
+
+    .alert-box p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    .alert-box button {
+      background-color: #ffffff;
+      border: none;
+      color: rgb(5, 5, 5);
+      padding: 8px 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      min-width: 80px;
+    }
+
+    .alert-box button:hover {
+      background-color: #019092;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body class="bd1">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img class="logo" src="img/logonova.png" alt="Logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="inicio.html">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Sobre Nós
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="Clinica.html"clinica.html>Nossa Clínica</a></li>
+                            <li><a class="dropdown-item" href="Objetivo.html">Nosso Objetivo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Especialidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+
+                            <li><a class="dropdown-item" href="Fisioterapia.html">Fisioterapia</a></li>
+                            <li><a class="dropdown-item" href="Oftamologia.html">Oftalmologia</a></li>
+                            <li><a class="dropdown-item" href="Odontologia.html">Odontologia</a></li>
+                            <li><a class="dropdown-item" href="Ortopedia.html">Ortopedia</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Serviços
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="CirurgiaGeral.html">Cirurgia Geral</a></li>
+                            <li><a class="dropdown-item" href="Consultas.html">Consultas</a></li>
+                            <li><a class="dropdown-item" href="Internação.html">Internação</a></li>
+                            <li><a class="dropdown-item" href="Quimioterapia.html">Quimioterapia</a></li>
+                            <li><a class="dropdown-item" href="Vacinacao.html">Vacinação</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Exames
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <li><a class="dropdown-item" href="Endoscopia.html">Endoscopia</a></li>
+                            <li><a class="dropdown-item" href="ColetaDeFezes.html">Exame de Fezes</a></li>
+                            <li><a class="dropdown-item" href="Sorologia.html">Sorologias</a></li>
+                            <li><a class="dropdown-item" href="TestesRapidos.html">Testes Rápidos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TrabalheConosco.html">Trabalhe Conosco</a>
+                    </li>
+                </ul>
+                <!-- Botão adicionado fora da lista -->
+                <div class="top-bar">
+                    <a class="top-bar-button" href="Login.html">Acesse a Área Administrativa</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+  <div class="login-container">
+    <div class="login-card">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="mb-3">
+          <label for="username" class="form-label">Usuário</label>
+          <input
+            type="text"
+            id="username"
+            class="form-control"
+            placeholder="Digite seu usuário"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Senha</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
+        <button type="submit" class="btn login-btn w-100">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Popup de alerta -->
+  <div id="alertBox" class="alert-box">
+    <p id="alertMessage"></p>
+    <button id="alertButton">OK</button>
+  </div>
+
+
+</body>
+</html>
